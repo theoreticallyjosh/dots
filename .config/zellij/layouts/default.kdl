@@ -1,0 +1,79 @@
+layout{
+    pane {
+        pane size=2 borderless=true {
+            plugin location="file:/home/jhagofsk/.config/zellij/plugins/zjstatus.wasm" {
+                color_fg "#616e88" //= Brightest + 10% - "#4C566A" = Brightest - "#434C5E" = Bright
+                color_bg "#2A2F41"
+                color_black "#414868"
+                color_red "red"
+                color_green "green"
+                color_yellow "yellow"
+                color_blue "blue"
+                color_magenta "magenta"
+                color_cyan "cyan"
+                color_white "white"
+                color_orange "orange"
+
+                format_left   "{mode}#[bg=$bg]"
+                format_center "#[bg=$bg,fg=$fg] Zellij: #[bg=$bg,fg=$fg]{session}"
+                format_right  "{tabs}"
+                format_space  "#[bg=$bg]"
+                format_hide_on_overlength "true"
+                format_precedence "crl"
+
+                border_enabled  "false"
+                border_char     "─"
+                border_format   "#[fg=#6C7086]{char}"
+                border_position "top"
+
+//              hide_frame_for_single_pane "true"
+
+                mode_normal        "#[bg=$blue,fg=$bg,bold] NORMAL#[bg=$bg,fg=$blue]"
+                mode_locked        "#[bg=$red,fg=$bg,bold] LOCKED #[bg=$bg,fg=$red]"
+                mode_resize        "#[bg=$green,fg=$bg,bold] RESIZE#[bg=$bg,fg=$green]"
+                mode_pane          "#[bg=$green,fg=$bg,bold] PANE#[bg=$bg,fg=$green]"
+                mode_tab           "#[bg=$yellow,fg=$bg,bold] TAB#[bg=$bg,fg=$yellow]"
+                mode_scroll        "#[bg=$green,fg=$bg,bold] SCROLL#[bg=$bg,fg=$green]"
+                mode_enter_search  "#[bg=$orange,fg=$bg,bold] ENT-SEARCH#[bg=$bg,fg=$orange]"
+                mode_search        "#[bg=$orange,fg=$bg,bold] SEARCHARCH#[bg=$bg,fg=$orange]"
+                mode_rename_tab    "#[bg=$yellow,fg=$bg,bold] RENAME-TAB#[bg=$bg,fg=$yellow]"
+                mode_rename_pane   "#[bg=$green,fg=$bg,bold] RENAME-PANE#[bg=$bg,fg=$green]"
+                mode_session       "#[bg=$green,fg=$bg,bold] SESSION#[bg=$bg,fg=$green]"
+                mode_move          "#[bg=$green,fg=$bg,bold] MOVE#[bg=$bg,fg=$green]"
+                mode_prompt        "#[bg=$green,fg=$bg,bold] PROMPT#[bg=$bg,fg=$green]"
+                mode_tmux          "#[bg=$magenta,fg=$bg,bold] TMUX#[bg=$bg,fg=$magenta]"
+
+                // formatting for inactive tabs
+                tab_normal              "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold]{index} #[bg=$bg,fg=$cyan,bold] {name}{floating_indicator}#[bg=$bg,fg=$bg,bold]"
+                tab_normal_fullscreen   "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold]{index} #[bg=$bg,fg=$cyan,bold] {name}{fullscreen_indicator}#[bg=$bg,fg=$bg,bold]"
+                tab_normal_sync         "#[bg=$bg,fg=$cyan]#[bg=$cyan,fg=$bg,bold]{index} #[bg=$bg,fg=$cyan,bold] {name}{sync_indicator}#[bg=$bg,fg=$bg,bold]"
+
+                // formatting for the current active tab
+                tab_active              "#[bg=$bg,fg=$yellow]#[bg=$yellow,fg=$bg,bold]{index} #[bg=$bg,fg=$yellow,bold] {name}{floating_indicator}#[bg=$bg,fg=$bg,bold]"
+                tab_active_fullscreen   "#[bg=$bg,fg=$yellow]#[bg=$yellow,fg=$bg,bold]{index} #[bg=$bg,fg=$yellow,bold] {name}{fullscreen_indicator}#[bg=$bg,fg=$bg,bold]"
+                tab_active_sync         "#[bg=$bg,fg=$yellow]#[bg=$yellow,fg=$bg,bold]{index} #[bg=$bg,fg=$yellow,bold] {name}{sync_indicator}#[bg=$bg,fg=$bg,bold]"
+
+                // separator between the tabs
+                tab_separator           "#[bg=$bg] "
+
+                // indicators
+                tab_sync_indicator       " "
+                tab_fullscreen_indicator " 󰊓"
+                tab_floating_indicator   " 󰹙"
+
+                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+                command_git_branch_format      "#[fg=$blue] {stdout} "
+                command_git_branch_interval    "10"
+                command_git_branch_rendermode  "static"
+
+                datetime        "#[fg=$fg] {format} "
+                datetime_format "%Y-%m-%d %H:%M"
+                datetime_timezone "Europe/Helsinki"
+            }
+        }
+            pane
+//    pane size=1 borderless=true {
+//            plugin location="zellij:status-bar"
+//        }
+    }
+}
