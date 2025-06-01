@@ -65,7 +65,7 @@ The only change I made in the config is appearance related e.g. the background f
 
 ## Meta
 
-TheoreticallyJosh (Joshua Hagofsky) – [@TheoreticallyJosh](https://twitter.com/TheoreticallyJosh) – theoreticallyjosh@gmail.com
+TheoreticallyJosh (Joshua Hagofsky) – [@theoreticjosh](https://twitter.com/theoreticjosh) – theoreticallyjosh@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
