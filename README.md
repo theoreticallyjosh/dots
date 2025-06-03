@@ -1,5 +1,7 @@
 # Theoretically My Configs (WIP)
 > The configuration files for my setup. May not always be up to date. Make sure you understand what a config does before you use it. 
+![Alt text](screenshot.png "Screenshot")
+
 
 OS:
 - [Arch](https://archlinux.org/) (btw)
