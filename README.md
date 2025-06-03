@@ -28,6 +28,7 @@ You can check out the list of all plugins I use or have [here](https://github.co
 Here is a list of plugins that I think are useful for anybody regardless of there development stack, or even if you aren't editing code.
 
 | Plugin | Comments |
+| ------ | -------- |
 | [zellij-nav.nvim](https://git.sr.ht/~swaits/zellij-nav.nvim) | It makes it easier to navigate between neovim and zellij panes. |
 | [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) | Buffer navigation. Great for quickly jumping between a few files |
 | [telescope](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy file searching and more |
